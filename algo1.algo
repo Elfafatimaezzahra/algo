@@ -1,0 +1,22 @@
+ALGORITHM count
+VAR
+    nbw, nbc, nbv: INTEGER := 0;
+    phrase:= STRING;
+BEGIN
+    write ("tapez votre phrase!");
+    read (phrase);
+    WHILE (phrase[nbc] <> ".") DO
+        nbc = nbc+1;
+        IF ((phrase[nbc] = "a") OR (phrase[nbc] = "o") OR (phrase[nbc] = "e") OR (phrase[nbc] = "u") OR (phrase[nbc] = "i") OR (phrase[nbc] = "y")) 
+           nbv := nbv+1;
+        END_IF
+        IF (phrase[nbc] = " ")
+           nbw := nbw+1;
+        END_IF
+    END_WHILE
+    nbc = nbc+1;
+    nbw = nbw+1;
+     write ("la longeur de la phrase est : ", nbc);
+     write ("nombre des mots : ", nbw);
+     write ("nombre des voyelles : ", nbv);
+END
